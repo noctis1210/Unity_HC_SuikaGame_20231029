@@ -66,12 +66,7 @@ namespace noctis
         //更新事件:約60FPS
         //可以偵測玩家的輸入行為
         private void Update()
-        {
-            M();
-        }
-
-        private void M()
-        {
+        { 
             // h = 玩家輸入水平按鍵
             float h = Input.GetAxis("Horizontal");
             //print($"<color=#96f>水平值:{h}</color>");
@@ -91,7 +86,4 @@ namespace noctis
             transform.position = point;
         }
     }
-
-
-
-}
+    }
