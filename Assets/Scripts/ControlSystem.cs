@@ -42,13 +42,54 @@ namespace noctis
         private void Update()
         {
             print("更新事件");
-        }*/
-        [Header("移速"),Range(0,50)]
+        }
+     */
+        [Header("移速"), Range(0, 50)]
         public float moveSpeed = 2.5f;
-        [Header("左邊界"),Tooltip("這是角色最左的地方")]
+        [Header("左邊界"), Tooltip("這是角色最左的地方")]
         public float limitleft = -4.3f;
         [Header("右邊界")]
         public float limitright = 4.3f;
+
+        //喚醒事件:遊戲開始時執行一次
+       /*rivate void Awake()
+            
+        {
+            print(777);
+            print("嗨今天過得好嗎");
+            print(moveSpeed);
+            print("<color=yellow>黃色的字</color>");
+            print("<color=#69f>左邊邊界:limitleft</color>");
+            print($"<color=#69f>左邊邊界:{limitleft}</color>");
+        }*/
+
+        //更新事件:約60FPS
+        //可以偵測玩家的輸入行為
+        private void Update()
+        {
+            M();
+        }
+
+        private void M()
+        {
+            // h = 玩家輸入水平按鍵
+            float h = Input.GetAxis("Horizontal");
+            //print($"<color=#96f>水平值:{h}</color>");
+
+            transform.Translate(h * Time.deltaTime * moveSpeed, 0, 0);
+
+            //角色的座標
+            //print(transform.position);
+
+            // 點 = 角色的座標
+            Vector3 point = transform.position;
+
+            //點.x = 數學的夾數(點.x，左邊界，右邊界)
+            point.x = Mathf.Clamp(point.x, limitleft, limitright);
+
+            //角色的座標 = 點
+            transform.position = point;
+        }
     }
 
 
