@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Noctis
+namespace noctis
 {
     /// <summary>
     /// 生成系統:隨機生成第一顆與下一顆物件

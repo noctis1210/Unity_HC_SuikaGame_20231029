@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3125379332966135074}
   - component: {fileID: 6075704496269428584}
   - component: {fileID: 2400827742085457965}
+  - component: {fileID: 2084056216680605530}
   m_Layer: 0
   m_Name: "\u53F2\u840A\u59C6_3_\u5EDA\u5E2B"
   m_TagString: Untagged
@@ -93,7 +94,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7178379643917938904}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -226,7 +227,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7178379643917938904}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -245,3 +246,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2084056216680605530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7178379643917938904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 833a409d95171c14b9f8133132df5507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 2
