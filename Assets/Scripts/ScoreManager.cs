@@ -18,6 +18,10 @@ namespace noctis
 
         public static ScoreManager instance;
 
+        // 分數 0 ~ 100 生成 0 1 2
+        // 分數 100 ~ 500 生成 0 1 2 3 4
+        // 分數 500 ~ 1000 生成 0 1 2 3 4 5 6
+        public int maxSlimeIndex = 2;
         private void Awake()
         {
             instance = this;
@@ -35,6 +39,21 @@ namespace noctis
             totalScore += score;
             //更新分數文字介面 = 總分.轉為文字();
             textScore.text = totalScore.ToString();
+
+            ChangeMaxSlimeIndex();
+        }
+        ///<summary>
+        ///變更最大史萊姆編號
+        /// </summary>
+        private void ChangeMaxSlimeIndex()
+         {
+                //如果 總分 >= 500 最大編號 6
+                if (totalScore >= 500) maxSlimeIndex = 6;
+                //如果 總分 >= 100 最大編號 4
+                else if (totalScore >= 100) maxSlimeIndex = 4;
+
+                print($"<color=#f99>最大史萊姆編號:{maxSlimeIndex}</color>");
+         }
         }
     }
 }
